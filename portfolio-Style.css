@@ -17,9 +17,7 @@
 :root {
     --bg-color: #fdfdfd;
     --text-color: #333;
-    --main-color: #2b1651;
     --white-color: #fdfdfd;
-    --shadow-color: rgb(106, 117, 136);
 }
 
 /* إعدادات عامة */
@@ -114,11 +112,9 @@ section {
     height: 100%;
     background: var(--main-color);
     clip-path: polygon(100% 0, 70% 0, 50% 50%, 70% 100%, 100% 100%);
-    z-index: 0;
 }
 
 .bottom-bar {
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -228,40 +224,24 @@ section {
 .about {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background: var(--bg-color);
     padding: 8rem 7%;
     box-shadow: inset 0 0 1rem rgba(0, 0, 0, .05);
-    gap: 3rem;
-    position: relative;
 }
 
 .about .about-content {
     width: 600px;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 .2rem .5rem var(--shadow-color);
     text-align: center;
-    background: var(--main-color);
-    margin-left: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: absolute;
 }
 
 .about-content h1 {
     font-size: 3.6rem;
     margin-bottom: 2rem;
-    color: var(--white-color);
 }
 
 .about-content p {
     font-size: 1.6rem;
     line-height: 1.8;
-    color: var(--white-color);
 }
-
-.about-content:hover{
-    transform: scale(1.08);
-
-}
-
