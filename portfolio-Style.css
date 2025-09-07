@@ -18,6 +18,8 @@
     --bg-color: #fdfdfd;
     --text-color: #333;
     --white-color: #fdfdfd;
+    --main-color: #190b34;
+    --shadow-color: rgba(0, 0, 0, .2);
 }
 
 /* إعدادات عامة */
@@ -115,6 +117,7 @@ section {
 }
 
 .bottom-bar {
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -224,6 +227,7 @@ section {
 .about {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background: var(--bg-color);
     padding: 8rem 7%;
     box-shadow: inset 0 0 1rem rgba(0, 0, 0, .05);
@@ -232,8 +236,17 @@ section {
 .about .about-content {
     width: 600px;
     padding: 20px;
+    background: var(--main-color);
+    box-shadow: var(--shadow-color);
     border-radius: 15px;
     text-align: center;
+    color: var(--white-color);
+    transition: transform 0.3s ease;
+}
+
+.about-content:hover {
+    transform: scale(1.08);
+    box-shadow: 0 2rem 3rem var(--main-color);
 }
 
 .about-content h1 {
@@ -245,3 +258,25 @@ section {
     font-size: 1.6rem;
     line-height: 1.8;
 }
+
+.about-image {
+    flex: 0 0 auto;
+    width: 400px;
+    height: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 2rem 3rem var(--main-color);
+}
+
+
+
