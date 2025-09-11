@@ -566,8 +566,8 @@ section {
 .contact p {
     padding: 20px;
     font-size: 22px;
-    font-weight: 600;
-    color: var(--text-color);
+    font-weight: 900;
+    color: var(--main-color);
 }
 
 .contact-contents {
@@ -606,10 +606,11 @@ section {
 
 .contact .contact-form {
     background-color: var(--main-color);
-    width: 500px;
+    width: 450px;
     height: 400px;
     gap: 10px;
-    border-radius: 8px;
+    border-radius:16px;
+    box-shadow: var(--shadow-color);
 }
 
 .contact-form .form-button button {
@@ -619,6 +620,12 @@ section {
     background-color: var(--white-color);
     color: var(--main-color);
     cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.form-button button:hover{
+     transform: scale(1.08);
 }
 
 .form-button {
@@ -715,6 +722,8 @@ section {
 .social-links a:nth-child(4) i {
     color: #d93025;
 }
+
+
 
 /* Email */
 

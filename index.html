@@ -8,6 +8,8 @@
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="portfolio-Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 </head>
 <body>
 
@@ -241,7 +243,7 @@
         </div>
         <div class="time-line">
             <h1>Fill the form!</h1>
-            <form class="contact-form">
+            <form class="contact-form" id="contact-form">
                 <div class="input-area">
                     <input type="text" name="Name" placeholder="Enter your name" required>
                     <input type="email" name="Email" placeholder="name@example.com" required>
@@ -258,10 +260,22 @@
 
 
 <script>
-    function showPortfolio() {
-        document.querySelector('header').style.display = 'none';
-        document.getElementById('portfolio').style.display = 'block';
-    }
+
+  (function(){
+    emailjs.init("5K53ITrGlXr2IkZD0");
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    emailjs.sendForm("service_b3bbg87", "template_oyxsjks", this)
+      .then(function() {
+        alert("the message had been sent successfully ✅");
+      }, function(error) {
+        alert("Error: please, try again ❌ " + JSON.stringify(error));
+      });
+  });
 </script>
+
 </body>
 </html>
